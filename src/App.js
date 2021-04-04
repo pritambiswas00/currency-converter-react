@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from "./Components/Header";
+import  './App.css'
+import { Route, Switch } from "react-router-dom";
+import CurrencyConverter from "./Container/Currencyconverter";
+import HomePage from "./Container/Homepage";
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Switch>
+        <Route path="/currencyconverter" component={CurrencyConverter} />
+        <Route path="/" exact component={HomePage} />
+      </Switch>
     </div>
   );
 }
-
-export default App;

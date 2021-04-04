@@ -1,0 +1,25 @@
+.Currency{
+    width: 60%;
+    background: transparent;
+}
+input{
+    font-size: 30px;
+    width: 50%;
+    border-radius: 5px;
+    outline: none;
+
+}
+input:focus-within{
+    color: #3c8a24;
+    outline: none;
+}
+select,
+select:focus{
+    font-size: 30px;
+    outline: none;
+}
+
+option{
+    background: #ccc;
+    border-bottom: 1px solid black;
+}
